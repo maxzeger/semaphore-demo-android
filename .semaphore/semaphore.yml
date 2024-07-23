@@ -44,11 +44,6 @@ blocks:
         always:
           commands:
             - artifact push job --expire-in 2w --destination reports/ app/build/reports/
-  - name: 'Block #3'
-    task:
-      jobs:
-        - name: 'Job #1'
-          commands: []
 promotions:
   - name: Start Integration tests
     pipeline_file: integration-tests.yml
